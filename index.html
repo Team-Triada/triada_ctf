@@ -1,257 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>TRIADA CTF 2025 - Hack the Impossible. Win the Glory.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Join TRIADA CTF 2025 - A 24-hour Capture The Flag competition featuring Crypto, Web, Forensics, Reverse Engineering, and more.">
-  <meta name="keywords" content="CTF, Capture The Flag, Cybersecurity, Hacking Competition, TRIADA">
-  <meta property="og:title" content="TRIADA CTF 2025">
-  <meta property="og:description" content="Join the ultimate Capture The Flag competition - TRIADA CTF 2025.">
-  <meta property="og:image" content="https://triada.in/images/logo.svg">
-  <meta property="og:url" content="https://triada.in/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#e10600">
-  <link rel="preconnect" href="https://fonts.cdnfonts.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <title>TRIADA CTF '25 - The First Capture The Flag at Yenepoya University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="TRIADA CTF '25 - The first cybersecurity Capture The Flag event at Yenepoya University. 48 hours, 10 categories, 120+ participants.">
+  <meta name="theme-color" content="#dc2626">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/technos" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="https://triada.in/images/logo.svg">
+  <link rel="icon" type="image/png" href="images/Triada_light.png">
 </head>
+
 <body>
-  <header class="header">
-    <div class="header-container">
-      <a href="https://triada.in/" class="brand" aria-label="TRIADA CTF Home">Triada</a>
-      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="grid-lines"></div>
+    <div class="particles"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <!-- <img src="images/Triada_light.png" alt="TRIADA" class="logo-img"> -->
+        <span class="logo-text">Triada</span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#stats" class="nav-link">Stats</a>
+        <a href="#winners" class="nav-link">Winners</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#team" class="nav-link">Sponsors</a>
+        <a href="#testimonials" class="nav-link">Feedback</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
-        <a href="#details">Details</a>
-        <a href="#categories">Categories</a>
-        <a href="#registration">Registration</a>
-        <a href="#sponsors">Sponsors</a>
-      </nav>
     </div>
-  </header>
+  </nav>
 
-  <main class="main-content">
-    <section class="hero-section">
-      <div class="hero-content">
-        <img src="https://triada.in/images/logo.svg" alt="TRIADA CTF Logo" class="hero-logo" loading="eager">
-        <h1>TRIADA CTF '25</h1>
-        <p class="hero-subtitle">Hack the Impossible. Win the Glory.</p>
-        <div class="countdown-container">
-          <div id="countdown" class="countdown-display" role="timer" aria-live="polite"></div>
-          <p class="countdown-label">Registration opens soon</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-in">27 September 2025</div>
+      <h1 class="hero-title animate-slide-up">
+        <span class="gradient-text">TRIADA</span> CTF '25
+      </h1>
+      <p class="hero-subtitle animate-slide-up-delay">The First-Ever Offline Capture The Flag Event at Yenepoya University</p>
+      <div class="hero-stats animate-fade-in-delay">
+        <div class="hero-stat">
+          <div class="stat-value" data-target="100">0</div>
+          <div class="stat-label">Participants</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-value" data-target="50">0</div>
+          <div class="stat-label">Teams</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-value" data-target="6">0</div>
+          <div class="stat-label">Hours</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-value" data-target="40">0</div>
+          <div class="stat-label">Challenges</div>
         </div>
       </div>
-    </section>
+      <div class="hero-cta animate-fade-in-delay-2">
+        <a href="#winners" class="btn btn-primary">View Winners</a>
+        <a href="#gallery" class="btn btn-secondary">Gallery</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+    </div>
+  </section>
 
-    <section id="sponsors" class="content-section">
-      <h2 class="section-title">Our Sponsors</h2>
-      <div class="sponsors-grid">
-        <div class="sponsor-tier">
-          <div class="sponsor-logos">
-            <a href="https://osec.io" target="_blank" rel="noopener noreferrer" aria-label="Visit OtterSec">
-              <img src="images/OtterSec-logo.png" alt="OtterSec" loading="lazy">
-            </a>
-            <a href="https://www.alteredsecurity.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Altered Security">
-              <img src="images/as-logo(1).png" alt="Altered Security" loading="lazy">
-            </a>
-            <a href="https://caido.io" target="_blank" rel="noopener noreferrer" aria-label="Visit Caido">
-              <img src="images/caido-logo.png" alt="Caido" loading="lazy">
-            </a>
-            <a href="https://offsec.com" target="_blank" rel="noopener noreferrer" aria-label="Visit OffSec">
-              <img src="images/OffSec_White.png" alt="OffSec" loading="lazy">
-            </a>
-            <a href="https://parrot-ctfs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Parrot CTFs">
-              <img src="images/parrotctf-logo.png" alt="Parrot CTFs" loading="lazy">
-            </a>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card animate-on-scroll">
+          <h3>Event Overview</h3>
+          <p>TRIADA CTF ’25 is the first-ever offline hands-on cybersecurity competition in the history of
+            Yenepoya University, giving students and enthusiasts the chance to test and enhance their
+            skills across Web, Crypto, Forensics, OSINT, and more.</p>
+        </div>
+        <div class="glass-card animate-on-scroll">
+          <h3>Challenge Categories</h3>
+          <div class="categories-list">
+            <div class="category-tag">Web Exploitation</div>
+            <div class="category-tag">Cryptography</div>
+            <div class="category-tag">Reverse Engineering</div>
+            <div class="category-tag">Forensics</div>
+            <div class="category-tag">Blockchain</div>
+            <div class="category-tag">Steganography</div>
+            <div class="category-tag">Pwn</div>
+            <div class="category-tag">OSINT</div>
+            <div class="category-tag">Miscellaneous</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="details" class="content-section">
-      <h2 class="section-title">Event Details</h2>
-      <div class="details-grid">
-        <div class="detail-item">
-          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-          <h3>Date</h3>
-          <p>27 September 2025</p>
+  <!-- Statistics Section -->
+  <section id="stats" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Statistics</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="user-round"></i></div>
+          <div class="stat-number">100+</div>
+          <div class="stat-desc">Participants</div>
         </div>
-        <div class="detail-item">
-          <i class="fas fa-clock" aria-hidden="true"></i>
-          <h3>Duration</h3>
-          <p>6 hours</p>
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="users"></i></div>
+          <div class="stat-number">50</div>
+          <div class="stat-desc">Teams</div>
         </div>
-        <div class="detail-item">
-          <i class="fas fa-laptop-code" aria-hidden="true"></i>
-          <h3>Platform</h3>
-          <p><a href="https://labs.triada.in/" target="_blank" rel="noopener noreferrer">Triada Labs</a></p>
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="clock"></i></div>
+          <div class="stat-number">6h</div>
+          <div class="stat-desc">Duration</div>
         </div>
-        <div class="detail-item">
-          <i class="fas fa-users" aria-hidden="true"></i>
-          <h3>Participation</h3>
-          <p>Solo or Duo</p>
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="flag"></i></div>
+          <div class="stat-number">40+</div>
+          <div class="stat-desc">Challenges</div>
         </div>
-        <div class="detail-item">
-          <i class="fas fa-trophy" aria-hidden="true"></i>
-          <h3>Prize Money</h3>
-          <p>Top 3 positions</p>
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="target"></i></div>
+          <div class="stat-number">450+</div>
+          <div class="stat-desc">Flags Captured</div>
         </div>
-        <div class="detail-item">
-          <i class="fas fa-signal" aria-hidden="true"></i>
-          <h3>Difficulty</h3>
-          <p>Easy to Expert</p>
+        <div class="stat-card glass-card animate-on-scroll">
+          <div class="stat-icon"><i data-lucide="trophy"></i></div>
+          <div class="stat-number">1,635</div>
+          <div class="stat-desc">Highest Score</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="categories" class="content-section">
-      <h2 class="section-title">Challenge Categories</h2>
-      <div class="categories-grid">
-        <div class="category-item">
-          <i class="fas fa-lock" aria-hidden="true"></i>
-          <h3>Crypto</h3>
+  <!-- Winners Section -->
+  <section id="winners" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Winners</h2>
+      </div>
+      <div class="winners-grid">
+        <div class="winner-card glass-card winner-gold animate-on-scroll">
+          <div class="winner-rank">1st</div>
+          <div class="winner-info">
+            <h3>Team cicada3301</h3>
+            <div class="winner-score">1,635 pts</div>
+          </div>
         </div>
-        <div class="category-item">
-          <i class="fas fa-globe" aria-hidden="true"></i>
-          <h3>Web</h3>
+        <div class="winner-card glass-card winner-silver animate-on-scroll">
+          <div class="winner-rank">2nd</div>
+          <div class="winner-info">
+            <h3>Team 47</h3>
+            <div class="winner-score">1,555 pts</div>
+          </div>
         </div>
-        <div class="category-item">
-          <i class="fas fa-search" aria-hidden="true"></i>
-          <h3>Forensics</h3>
-        </div>
-        <div class="category-item">
-          <i class="fas fa-code" aria-hidden="true"></i>
-          <h3>Reverse Eng.</h3>
-        </div>
-        <div class="category-item">
-          <i class="fas fa-random" aria-hidden="true"></i>
-          <h3>Misc</h3>
+        <div class="winner-card glass-card winner-bronze animate-on-scroll">
+          <div class="winner-rank">3rd</div>
+          <div class="winner-info">
+            <h3>Team Boomarang</h3>
+            <div class="winner-score">1,470 pts</div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="registration" class="content-section">
-      <h2 class="section-title">Registration</h2>
-      <div class="registration-content">
-        <p class="registration-text">Registration will open soon. Stay tuned for updates.</p>
+  <!-- Prizes Section -->
+  <section id="prizes" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Prizes</h2>
       </div>
-    </section>
-  </main>
+      <div class="prizes-grid">
+        <div class="prize-card glass-card prize-gold animate-on-scroll">
+          <div class="prize-rank">
+            <i data-lucide="trophy"></i>
+            <span>Winner</span>
+          </div>
+          <div class="prize-amount">₹5,000</div>
+          <div class="prize-sponsor">by OtterSec</div>
+          <div class="prize-divider"></div>
+          <div class="prize-extras">
+            <div class="prize-extra-item">
+              <i data-lucide="award"></i>
+              <span>CRTP by Altered Security</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="key"></i>
+              <span>Caido Licences</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="shield"></i>
+              <span>OffSec Proving Grounds</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="gift"></i>
+              <span>Parrot CTF Vouchers</span>
+            </div>
+          </div>
+        </div>
+        <div class="prize-card glass-card prize-silver animate-on-scroll">
+          <div class="prize-rank">
+            <i data-lucide="medal"></i>
+            <span>Runner Up</span>
+          </div>
+          <div class="prize-amount">₹3,000</div>
+          <div class="prize-sponsor">by OtterSec</div>
+          <div class="prize-divider"></div>
+          <div class="prize-extras">
+            <div class="prize-extra-item">
+              <i data-lucide="key"></i>
+              <span>Caido Licences</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="shield"></i>
+              <span>OffSec Proving Grounds</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="gift"></i>
+              <span>Parrot CTF Vouchers</span>
+            </div>
+          </div>
+        </div>
+        <div class="prize-card glass-card prize-bronze animate-on-scroll">
+          <div class="prize-rank">
+            <i data-lucide="award"></i>
+            <span>Second Runner Up</span>
+          </div>
+          <div class="prize-amount">₹2,000</div>
+          <div class="prize-sponsor">by OtterSec</div>
+          <div class="prize-divider"></div>
+          <div class="prize-extras">
+            <div class="prize-extra-item">
+              <i data-lucide="key"></i>
+              <span>Caido Licences</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="shield"></i>
+              <span>OffSec Proving Grounds</span>
+            </div>
+            <div class="prize-extra-item">
+              <i data-lucide="gift"></i>
+              <span>Parrot CTF Vouchers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Gallery Section -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item glass-card animate-on-scroll">
+          <img src="images/venue.jpg" alt="Event Venue" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Event Venue</h4>
+          </div>
+        </div>
+        <div class="gallery-item glass-card animate-on-scroll">
+          <img src="images/team_3.jpg" alt="Team Photos" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Team Photos</h4>
+          </div>
+        </div>
+        <div class="gallery-item glass-card animate-on-scroll">
+          <img src="images/grp.jpg" alt="Group Photo" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Group Photo</h4>
+          </div>
+        </div>
+        <div class="gallery-item glass-card animate-on-scroll">
+          <img src="images/prize.jpg" alt="Prize Distribution" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Prize Distribution</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 class="section-title">Organizers & Sponsors</h2>
+      </div>
+
+      <div class="section-subgroup">
+        <div class="subsection-header">
+          <h3 class="subsection-title">Sponsors</h3>
+          <p class="subsection-copy">Fueling the competition with prizes, infrastructure, and mentorship.</p>
+        </div>
+        <div class="sponsors-grid">
+          <div class="sponsor-card glass-card animate-on-scroll">
+            <img src="images/OtterSec-logo.png" alt="OtterSec" loading="lazy">
+            <h4>OtterSec</h4>
+          </div>
+          <div class="sponsor-card glass-card animate-on-scroll">
+            <img src="images/as-logo(1).png" alt="Altered Security" loading="lazy">
+            <h4>Altered Security</h4>
+          </div>
+          <div class="sponsor-card glass-card animate-on-scroll">
+            <img src="images/OffSec_White.png" alt="OffSec" loading="lazy">
+            <h4>OffSec</h4>
+          </div>
+          <div class="sponsor-card glass-card animate-on-scroll">
+            <img src="images/caido-logo.png" alt="Caido" loading="lazy">
+            <h4>Caido</h4>
+          </div>
+          <div class="sponsor-card glass-card animate-on-scroll">
+            <img src="images/parrotctf-logo.png" alt="Parrot CTF" loading="lazy">
+            <h4>Parrot CTF</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="section-subgroup">
+        <div class="subsection-header">
+          <h3 class="subsection-title">Organizing Team</h3>
+          <p class="subsection-copy">Meet the students who architected the challenges, logistics, and vibe.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card glass-card animate-on-scroll"
+              onclick="window.location.href='https://adarsh.triada.in'"
+              style="cursor: pointer;">
+              <span class="team-handle">AxiØm</span>
+              <h4>Adarsh SR</h4>
+              <p class="team-role">Team Lead</p>
+          </div>
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">J1nx</span>
+            <h4>Likith A</h4>
+            <p class="team-role">Tech Lead</p>
+          </div>
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">Ro0tk1e</span>
+            <h4>Md Assad</h4>
+            <p class="team-role">Operations Head</p>
+          </div>
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">Hridhik S</span>
+            <h4>Hridhik S</h4>
+            <p class="team-role">Team Member</p>
+          </div>
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">Abhinav s</span>
+            <h4>Abhinav S</h4>
+            <p class="team-role">Media</p>
+          </div>
+          
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">Aron reji</span>
+            <h4>Aron Reji</h4>
+            <p class="team-role">Media</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2 class="section-title">Participant Feedback</h2>
+        <p class="section-subtitle">The participants shared highly positive feedback regarding the event, highlighting both learning outcomes and overall experience.</p>
+      </div>
+      <div class="testimonials-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carousel-track">
+            <div class="testimonial-card glass-card active">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+              </div>
+              <p class="testimonial-text">"CTF is the thing we learned, thank you TRIADA!"</p>
+              <div class="testimonial-author">
+                <span class="team-name">Team: chmod 777</span>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+              </div>
+              <p class="testimonial-text">"Teamwork and new hacking skills—loved it!"</p>
+              <div class="testimonial-author">
+                <span class="team-name">Team: TRIADA BATCH 25</span>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+              </div>
+              <p class="testimonial-text">"I learned new commands and techniques, it was very helpful."</p>
+              <div class="testimonial-author">
+                <span class="team-name">Team: shinziya & veda</span>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+              </div>
+              <p class="testimonial-text">"Everything seemed perfect, I loved the challenges."</p>
+              <div class="testimonial-author">
+                <span class="team-name">Team: Error404!</span>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+              </div>
+              <p class="testimonial-text">"Great platform and communication, more hints next time!"</p>
+              <div class="testimonial-author">
+                <span class="team-name">Team: ROG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 TRIADA CTF. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Triada</span>
+        </div>
+        <p>&copy; 2025 TRIADA</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Burger Menu Functionality
-    const burgerMenu = document.getElementById('burger-menu');
-    const mainNav = document.getElementById('main-nav');
-    const navLinks = mainNav.querySelectorAll('a');
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <img src="" alt="" id="lightbox-img">
+  </div>
 
-    burgerMenu.addEventListener('click', () => {
-      const isExpanded = burgerMenu.getAttribute('aria-expanded') === 'true';
-      burgerMenu.setAttribute('aria-expanded', !isExpanded);
-      burgerMenu.classList.toggle('active');
-      mainNav.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        burgerMenu.classList.remove('active');
-        mainNav.classList.remove('active');
-        burgerMenu.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!burgerMenu.contains(e.target) && !mainNav.contains(e.target)) {
-        burgerMenu.classList.remove('active');
-        mainNav.classList.remove('active');
-        burgerMenu.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Smooth scrolling for navigation links
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        }
-      });
-    });
-
-    // Countdown Timer
-    const countdown = document.getElementById('countdown');
-    const ctfDate = new Date('2025-09-26T00:00:00Z').getTime();
-    
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = ctfDate - now;
-      
-      if (distance < 0) {
-        countdown.innerHTML = "CTF is LIVE!";
-        countdown.setAttribute('aria-label', 'CTF is now live');
-        return;
-      }
-      
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      const countdownText = `${days}d ${hours}h ${mins}m ${secs}s`;
-      countdown.innerHTML = countdownText;
-      countdown.setAttribute('aria-label', `Time remaining: ${countdownText}`);
-    }
-
-    // Initialize countdown
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Performance optimization: Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.detail-item, .category-item').forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(20px)';
-      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(item);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
