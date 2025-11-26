@@ -90,7 +90,7 @@ document.querySelectorAll('.stat-value[data-target]').forEach(el => {
 });
 
 // Gallery Lightbox
-const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryItems = document.querySelectorAll('.bento-item');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');

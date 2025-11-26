@@ -1,21 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8">
-  <title>TRIADA CTF '25 - The First Capture The Flag at Yenepoya University</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="TRIADA CTF '25 - The first cybersecurity Capture The Flag event at Yenepoya University. 48 hours, 10 categories, 120+ participants.">
-  <meta name="theme-color" content="#dc2626">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
+  <!-- Primary Meta Tags -->
+  <title>TRIADA CTF '25 - Yenepoya's Premier Cybersecurity Capture The Flag Competition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="TRIADA CTF '25: The first offline cybersecurity Capture The Flag competition at Yenepoya University. 100+ participants, 50 teams, 40+ challenges across Web, Crypto, Forensics, OSINT, Blockchain, Steganography, Pwn, Reverse Engineering, and more. Organized by student-led cybersecurity enthusiasts.">
+  <meta name="keywords" content="CTF, Capture The Flag, cybersecurity competition, Yenepoya University, hacking competition, ethical hacking, web exploitation, cryptography, forensics, OSINT, reverse engineering, steganography, pwn, blockchain security">
+  <meta name="author" content="Team TRIADA">
+  <meta name="theme-color" content="#dc2626">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TRIADA CTF">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="event">
+  <meta property="og:url" content="https://triada-ctf.tech">
+  <meta property="og:title" content="TRIADA CTF '25 - Yenepoya's Premier Cybersecurity Capture The Flag">
+  <meta property="og:description" content="Experience the first offline CTF competition at Yenepoya University. 100+ participants, 40+ challenges, multiple prize categories, and world-class mentorship from cybersecurity professionals.">
+  <meta property="og:image" content="https://triada-ctf.tech/images/triada-25.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TRIADA CTF 2025 - Team Photo">
+  <meta property="og:site_name" content="TRIADA CTF">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://triada-ctf.tech">
+  <meta name="twitter:title" content="TRIADA CTF '25 - Cybersecurity Capture The Flag at Yenepoya University">
+  <meta name="twitter:description" content="Join 100+ cybersecurity enthusiasts in the first offline CTF competition at Yenepoya University. Win prizes and prove your skills!">
+  <meta name="twitter:image" content="https://triada-ctf.tech/images/triada-25.png">
+  <meta name="twitter:creator" content="@TriadaCTF">
+  
+  <!-- Additional Meta Tags for SEO -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="revisit-after" content="7 days">
+  <meta name="language" content="English">
+  <meta name="rating" content="general">
+  <link rel="canonical" href="https://triada-ctf.tech">
+  
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.cdnfonts.com">
+  
+  <!-- Fonts with Font Display Optimization -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/technos" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/Triada_light.png">
+  
+  <!-- Icons and Stylesheet -->
+  <script src="https://unpkg.com/lucide@latest" async></script>
+  <link rel="stylesheet" href="style.css" media="screen">
+  <link rel="icon" type="image/png" href="images/Triada_light.png" sizes="any">
+  <link rel="apple-touch-icon" href="images/Triada_light.png">
+  
+  <!-- JSON-LD Structured Data: Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "TRIADA CTF 2025",
+    "description": "The first offline cybersecurity Capture The Flag competition at Yenepoya University featuring 100+ participants across 50 teams competing in 40+ challenges.",
+    "url": "https://triada-ctf.tech",
+    "image": "https://triada-ctf.tech/images/triada-25.png",
+    "startDate": "2025-09-27T08:00:00+05:30",
+    "endDate": "2025-09-27T14:00:00+05:30",
+    "duration": "PT6H",
+    "eventStatus": "EventScheduled",
+    "eventAttendanceMode": "OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Yenepoya University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "addressLocality": "Mangaluru",
+        "addressRegion": "Karnataka"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Team TRIADA",
+      "url": "https://triada-ctf.tech",
+      "logo": "https://triada-ctf.tech/images/Triada_light.png",
+      "sameAs": ["https://twitter.com/TriadaCTF"]
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://triada-ctf.tech#winners",
+      "price": "0",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/SoldOut",
+      "validFrom": "2025-09-27"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "100",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+  
+  <!-- JSON-LD Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TRIADA",
+    "alternateName": "Team TRIADA",
+    "url": "https://triada-ctf.tech",
+    "logo": "https://triada-ctf.tech/images/Triada_light.png",
+    "description": "Student-led cybersecurity organization hosting the first offline Capture The Flag competition at Yenepoya University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressLocality": "Mangaluru",
+      "addressRegion": "Karnataka"
+    },
+    "sameAs": ["https://twitter.com/TriadaCTF"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Event Information",
+      "url": "https://triada-ctf.tech"
+    }
+  }
+  </script>
+  
+  <!-- JSON-LD Structured Data: FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is TRIADA CTF 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TRIADA CTF 2025 is the first-ever offline cybersecurity Capture The Flag competition at Yenepoya University, featuring 100+ participants competing across 40+ challenges in categories including Web Exploitation, Cryptography, Forensics, OSINT, and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many teams participated in TRIADA CTF 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "50 teams participated in TRIADA CTF 2025, with over 100 participants total competing for 6 hours to solve 40+ cybersecurity challenges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What were the prize categories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Winners received ₹5,000 with additional prizes including CRTP certification, Caido licenses, OffSec Proving Grounds access, and Parrot CTF vouchers. Runner-up teams received ₹3,000 and ₹2,000 respectively with similar additional benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who were the winning teams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1st Place: Team cicada3301 with 1,635 points. 2nd Place: Team 47 with 1,555 points. 3rd Place: Team Boomarang with 1,470 points."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://triada-ctf.tech"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://triada-ctf.tech#about"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Winners",
+        "item": "https://triada-ctf.tech#winners"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Gallery",
+        "item": "https://triada-ctf.tech#gallery"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -55,7 +248,8 @@
       <h1 class="hero-title animate-slide-up">
         <span class="gradient-text">TRIADA</span> CTF '25
       </h1>
-      <p class="hero-subtitle animate-slide-up-delay">The First-Ever Offline Capture The Flag Event at Yenepoya University</p>
+      <p class="hero-subtitle animate-slide-up-delay">The First-Ever Offline Capture The Flag Event at Yenepoya
+        University</p>
       <div class="hero-stats animate-fade-in-delay">
         <div class="hero-stat">
           <div class="stat-value" data-target="100">0</div>
@@ -283,29 +477,66 @@
         <span class="section-number">05</span>
         <h2 class="section-title">Gallery</h2>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item glass-card animate-on-scroll">
+      <div class="bento-grid">
+        <!-- Row 1: Wide group photo spanning full width -->
+        <div class="bento-item bento-wide glass-card animate-on-scroll">
+          <img src="images/triada-25.png" alt="Group Photo" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>The Team</h4>
+          </div>
+        </div>
+
+        <!-- Row 2: Two landscape photos side by side -->
+        <div class="bento-item bento-medium glass-card animate-on-scroll">
           <img src="images/venue.jpg" alt="Event Venue" loading="lazy">
           <div class="gallery-overlay">
             <h4>Event Venue</h4>
           </div>
         </div>
-        <div class="gallery-item glass-card animate-on-scroll">
+        <div class="bento-item bento-medium glass-card animate-on-scroll">
           <img src="images/team_3.jpg" alt="Team Photos" loading="lazy">
           <div class="gallery-overlay">
-            <h4>Team Photos</h4>
+            <h4>Team</h4>
           </div>
         </div>
-        <div class="gallery-item glass-card animate-on-scroll">
-          <img src="images/grp.jpg" alt="Group Photo" loading="lazy">
+
+        <!-- Row 3: Tall portrait + two stacked squares -->
+        <div class="bento-item bento-tall glass-card animate-on-scroll">
+          <img src="images/event_12 (3).png" alt="Event Highlights" loading="lazy">
           <div class="gallery-overlay">
-            <h4>Group Photo</h4>
+            <h4></h4>
           </div>
         </div>
-        <div class="gallery-item glass-card animate-on-scroll">
-          <img src="images/prize.jpg" alt="Prize Distribution" loading="lazy">
+        <div class="bento-item bento-square glass-card animate-on-scroll">
+          <img src="images/event_12 (2).png" alt="Event Highlights" loading="lazy">
           <div class="gallery-overlay">
-            <h4>Prize Distribution</h4>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="bento-item bento-square glass-card animate-on-scroll">
+          <img src="images/event_12 (5).png" alt="Event Highlights" loading="lazy">
+          <div class="gallery-overlay">
+            <h4></h4>
+          </div>
+        </div>
+
+        <!-- Row 4: Portrait + landscape prize -->
+        <div class="bento-item bento-portrait glass-card animate-on-scroll">
+          <img src="images/event_12 (1).png" alt="Event Highlights" loading="lazy">
+          <div class="gallery-overlay">
+            <h4></h4>
+          </div>
+        </div>
+        <div class="bento-item bento-portrait glass-card animate-on-scroll">
+          <img src="images/event_12 (4).png" alt="Event Highlights" loading="lazy">
+          <div class="gallery-overlay">
+            <h4></h4>
+          </div>
+        </div>
+        <div class="bento-item bento-square glass-card animate-on-scroll">
+          <img src="images/event_12 (6).png" alt="Event Highlights" loading="lazy">
+          <div class="gallery-overlay">
+            <h4></h4>
           </div>
         </div>
       </div>
@@ -357,12 +588,11 @@
           <p class="subsection-copy">Meet the students who architected the challenges, logistics, and vibe.</p>
         </div>
         <div class="team-grid">
-          <div class="team-card glass-card animate-on-scroll"
-              onclick="window.location.href='https://adarsh.triada.in'"
-              style="cursor: pointer;">
-              <span class="team-handle">AxiØm</span>
-              <h4>Adarsh SR</h4>
-              <p class="team-role">Team Lead</p>
+          <div class="team-card glass-card animate-on-scroll" onclick="window.location.href='https://adarsh.triada.in'"
+            style="cursor: pointer;">
+            <span class="team-handle">AxiØm</span>
+            <h4>Adarsh SR</h4>
+            <p class="team-role">Team Lead</p>
           </div>
           <div class="team-card glass-card animate-on-scroll">
             <span class="team-handle">J1nx</span>
@@ -384,7 +614,7 @@
             <h4>Abhinav S</h4>
             <p class="team-role">Media</p>
           </div>
-          
+
           <div class="team-card glass-card animate-on-scroll">
             <span class="team-handle">Aron reji</span>
             <h4>Aron Reji</h4>
@@ -395,13 +625,25 @@
     </div>
   </section>
 
+  <!-- Coming Soon -->
+  <section id="coming-soon" class="section coming-soon-section">
+    <div class="container">
+      <div class="coming-soon-content animate-on-scroll">
+        <span class="coming-soon-badge">UPCOMING</span>
+        <h2 class="coming-soon-title">Triada CTF '26</h2>
+        <p class="coming-soon-text">Coming Soon<span class="typing-dots">...</span></p>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section id="testimonials" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">07</span>
+        <span class="section-number">08</span>
         <h2 class="section-title">Participant Feedback</h2>
-        <p class="section-subtitle">The participants shared highly positive feedback regarding the event, highlighting both learning outcomes and overall experience.</p>
+        <p class="section-subtitle">The participants shared highly positive feedback regarding the event, highlighting
+          both learning outcomes and overall experience.</p>
       </div>
       <div class="testimonials-carousel">
         <div class="carousel-container">
