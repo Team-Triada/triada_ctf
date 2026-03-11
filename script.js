@@ -26,8 +26,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    // If the href was dynamically changed to an external URL, let the browser handle it
+    if (!href || !href.startsWith('#')) return;
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
@@ -131,14 +134,14 @@ const nav = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
+
   if (currentScroll > 100) {
     nav.style.background = 'rgba(10, 10, 10, 0.95)';
     nav.style.backdropFilter = 'blur(20px)';
   } else {
     nav.style.background = 'rgba(10, 10, 10, 0.8)';
   }
-  
+
   lastScroll = currentScroll;
 });
 
@@ -162,7 +165,7 @@ function initCarousel() {
   if (originalCards.length === 0) return;
 
   const totalCards = originalCards.length;
-  
+
   // Clone cards for infinite loop (clone 2 sets for seamless transition)
   const cardsArray = Array.from(originalCards);
   cardsArray.forEach(card => {
@@ -185,7 +188,7 @@ function initCarousel() {
 
   const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
   const allCards = track.querySelectorAll('.testimonial-card');
-  
+
   let currentIndex = 0;
   let scrollPosition = 0;
   let isScrolling = false;
@@ -207,19 +210,19 @@ function initCarousel() {
 
   function updateCarousel() {
     if (isScrolling) return;
-    
+
     const cardWidth = getCardWidth();
     if (cardWidth === 0) return;
-    
+
     isScrolling = true;
     track.style.transform = `translateX(-${scrollPosition}px)`;
-    
+
     // Calculate which original card is in view (for indicators)
     const visibleIndex = Math.round(scrollPosition / cardWidth) % totalCards;
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle('active', index === visibleIndex);
     });
-    
+
     setTimeout(() => {
       isScrolling = false;
     }, 600);
@@ -228,10 +231,10 @@ function initCarousel() {
   function nextSlide() {
     const cardWidth = getCardWidth();
     if (cardWidth === 0) return;
-    
+
     scrollPosition += cardWidth;
     currentIndex = (currentIndex + 1) % totalCards;
-    
+
     // Reset position seamlessly when we've scrolled through all original cards
     const maxScroll = cardWidth * totalCards;
     if (scrollPosition >= maxScroll) {
@@ -241,7 +244,7 @@ function initCarousel() {
       void track.offsetWidth; // Force reflow
       track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
     }
-    
+
     updateCarousel();
     resetAutoScroll();
   }
@@ -249,7 +252,7 @@ function initCarousel() {
   function goToSlide(index) {
     const cardWidth = getCardWidth();
     if (cardWidth === 0) return;
-    
+
     currentIndex = index;
     scrollPosition = cardWidth * index;
     updateCarousel();
@@ -259,7 +262,7 @@ function initCarousel() {
   function startAutoScroll() {
     const visibleCards = getVisibleCards();
     const scrollSpeed = visibleCards === 3 ? 3000 : visibleCards === 2 ? 2500 : 2000;
-    
+
     autoScrollInterval = setInterval(() => {
       nextSlide();
     }, scrollSpeed);
@@ -307,3 +310,92 @@ function initCarousel() {
     startAutoScroll();
   }, 800);
 }
+
+// ===== Sponsor Modal =====
+const SPONSOR_DATA = {
+  ottersec: {
+    name: 'OtterSec',
+    logo: 'images/OtterSec-logo.png',
+    description: 'OtterSec is a leading Web3 and blockchain security firm specialising in smart contract audits, penetration testing, and security research. They sponsored the cash prizes for TRIADA CTF \'25.',
+    tags: ['Web3 Security', 'Smart Contract Audits', 'Blockchain', 'Pen Testing'],
+    website: 'https://osec.io'
+  },
+  alteredsecurity: {
+    name: 'Altered Security',
+    logo: 'images/as-logo(1).png',
+    description: 'Altered Security offers hands-on offensive security training and certification programs such as CRTP (Certified Red Team Professional), empowering professionals with real-world attack and defense skills.',
+    tags: ['Red Team Training', 'CRTP Certification', 'Active Directory', 'Offensive Security'],
+    website: 'https://www.alteredsecurity.com'
+  },
+  offsec: {
+    name: 'OffSec',
+    logo: 'images/OffSec_White.png',
+    description: 'OffSec (Offensive Security) is the organisation behind Kali Linux and the renowned OSCP certification. They provided Proving Grounds access vouchers, giving winners hands-on practice lab experiences.',
+    tags: ['OSCP', 'Kali Linux', 'Proving Grounds', 'Certifications'],
+    website: 'https://www.offsec.com'
+  },
+  caido: {
+    name: 'Caido',
+    logo: 'images/caido-logo.png',
+    description: 'Caido is a modern web security auditing tool designed for security professionals. Lightweight and powerful, it streamlines web application pentesting with a clean, focused interface.',
+    tags: ['Web Pentesting', 'Proxy Tool', 'Security Auditing', 'HTTP Inspection'],
+    website: 'https://caido.io'
+  },
+  parrotctf: {
+    name: 'Lorikeet Security',
+    logo: 'images/parrotctf-logo.png',
+    description: 'Lorikeet Security is a cybersecurity firm focused on offensive security research, vulnerability disclosure, and supporting the next generation of security professionals through community events and sponsorships.',
+    tags: ['Cybersecurity', 'Offensive Security', 'Research', 'Community'],
+    website: 'https://lorikeetsecurity.com/'
+  }
+};
+
+const sponsorOverlay = document.getElementById('sponsor-modal-overlay');
+const sponsorModalClose = document.getElementById('sponsor-modal-close');
+const sponsorModalLogo = document.getElementById('sponsor-modal-logo');
+const sponsorModalName = document.getElementById('sponsor-modal-name');
+const sponsorModalDesc = document.getElementById('sponsor-modal-desc');
+const sponsorModalTags = document.getElementById('sponsor-modal-tags');
+const sponsorModalLink = document.getElementById('sponsor-modal-link');
+
+function openSponsorModal(key) {
+  const data = SPONSOR_DATA[key];
+  if (!data) return;
+
+  sponsorModalLogo.src = data.logo;
+  sponsorModalLogo.alt = data.name;
+  sponsorModalName.textContent = data.name;
+  sponsorModalDesc.textContent = data.description;
+  sponsorModalLink.href = data.website;
+
+  sponsorModalTags.innerHTML = data.tags
+    .map(tag => `<span class="sponsor-modal-tag">${tag}</span>`)
+    .join('');
+
+  sponsorOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Re-render lucide icons inside modal
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
+function closeSponsorModal() {
+  sponsorOverlay.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+document.querySelectorAll('.sponsor-card[data-sponsor]').forEach(card => {
+  card.addEventListener('click', () => openSponsorModal(card.dataset.sponsor));
+});
+
+sponsorModalClose.addEventListener('click', closeSponsorModal);
+
+sponsorOverlay.addEventListener('click', (e) => {
+  if (e.target === sponsorOverlay) closeSponsorModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && sponsorOverlay.classList.contains('active')) {
+    closeSponsorModal();
+  }
+});

@@ -366,23 +366,23 @@
           <p class="subsection-copy">Fueling the competition with prizes, infrastructure, and mentorship.</p>
         </div>
         <div class="sponsors-grid">
-          <div class="sponsor-card glass-card animate-on-scroll">
+          <div class="sponsor-card glass-card animate-on-scroll" data-sponsor="ottersec" style="cursor:pointer;">
             <img src="images/OtterSec-logo.png" alt="OtterSec" loading="lazy">
             <h4>OtterSec</h4>
           </div>
-          <div class="sponsor-card glass-card animate-on-scroll">
+          <div class="sponsor-card glass-card animate-on-scroll" data-sponsor="alteredsecurity" style="cursor:pointer;">
             <img src="images/as-logo(1).png" alt="Altered Security" loading="lazy">
             <h4>Altered Security</h4>
           </div>
-          <div class="sponsor-card glass-card animate-on-scroll">
+          <div class="sponsor-card glass-card animate-on-scroll" data-sponsor="offsec" style="cursor:pointer;">
             <img src="images/OffSec_White.png" alt="OffSec" loading="lazy">
             <h4>OffSec</h4>
           </div>
-          <div class="sponsor-card glass-card animate-on-scroll">
+          <div class="sponsor-card glass-card animate-on-scroll" data-sponsor="caido" style="cursor:pointer;">
             <img src="images/caido-logo.png" alt="Caido" loading="lazy">
             <h4>Caido</h4>
           </div>
-          <div class="sponsor-card glass-card animate-on-scroll">
+          <div class="sponsor-card glass-card animate-on-scroll" data-sponsor="parrotctf" style="cursor:pointer;">
             <img src="images/parrotctf-logo.png" alt="Parrot CTF" loading="lazy">
             <h4>Parrot CTF</h4>
           </div>
@@ -428,6 +428,11 @@
             <span class="team-handle">Aron reji</span>
             <h4>Aron Reji</h4>
             <p class="team-role">Media</p>
+          </div>
+          <div class="team-card glass-card animate-on-scroll">
+            <span class="team-handle">bhavy</span>
+            <h4>Bhavy Soni</h4>
+            <p class="team-role">Web Developer</p>
           </div>
         </div>
       </div>
@@ -525,6 +530,23 @@
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightbox-close">&times;</button>
     <img src="" alt="" id="lightbox-img">
+  </div>
+
+  <!-- Sponsor Modal -->
+  <div class="sponsor-modal-overlay" id="sponsor-modal-overlay">
+    <div class="sponsor-modal glass-card">
+      <button class="sponsor-modal-close" id="sponsor-modal-close">&times;</button>
+      <div class="sponsor-modal-logo-wrap">
+        <img src="" alt="" id="sponsor-modal-logo" class="sponsor-modal-logo">
+      </div>
+      <h3 id="sponsor-modal-name"></h3>
+      <p id="sponsor-modal-desc" class="sponsor-modal-desc"></p>
+      <div class="sponsor-modal-tags" id="sponsor-modal-tags"></div>
+      <a id="sponsor-modal-link" href="#" target="_blank" rel="noopener noreferrer"
+        class="btn btn-primary sponsor-modal-btn">
+        Visit Website <i data-lucide="external-link"></i>
+      </a>
+    </div>
   </div>
 
   <script src="script.js"></script>
